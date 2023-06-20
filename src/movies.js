@@ -29,6 +29,22 @@ function scoresAverage(moviesArray) {
   }
 }
 
+/*Here is my attempt to add a conditional statement, but I don't know how to do it as part of a function that is written like this
+function scoresAverage(moviesArray) {
+  if (moviesArray.length === 0) {
+    return 0;
+  } else {
+    const cumulatedScore = moviesArray.reduce(
+        (acc, movie) => if (movie.score != "") {
+            acc + movie.score,
+                0
+        } else continue;
+    );
+    const averageScore = cumulatedScore / moviesArray.length;
+    return parseFloat(averageScore.toFixed(2));
+  }
+} */
+
 // Iteration 4: Drama movies - Get the average of Drama Movies
 function dramaMoviesScore(moviesArray) {
   const dramaMovies = moviesArray.filter((movie) =>
@@ -74,7 +90,7 @@ function orderAlphabetically(moviesArray) {
 
 // BONUS - Iteration 7: Time Format - Turn duration of the movies from hours to minutes
 function turnHoursToMinutes(moviesArray) {
-
+    
 }
 
 // BONUS - Iteration 8: Best yearly score average - Best yearly score average
