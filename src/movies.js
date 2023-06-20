@@ -66,7 +66,7 @@ function dramaMoviesScore(moviesArray) {
 function orderByYear(moviesArray) {
   byYear = moviesArray
     .slice()
-    .sort((a, b) => a.year - b.year || a.title - b.title);
+    .sort((a, b) => a.year - b.year || a.title.localeCompare(b.title));
   return byYear;
 }
 
