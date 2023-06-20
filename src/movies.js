@@ -72,26 +72,24 @@ function orderByYear(moviesArray) {
 
 // Iteration 6: Alphabetic Order - Order by title and print the first 20 titles
 function orderAlphabetically(moviesArray) {
-  const allTitles = moviesArray.slice().sort((a, b) => a.title - b.title);
+  const allTitles = moviesArray
+    .slice()
+    .sort((a, b) => a.title.localeCompare(b.title));
   let top20 = [];
   if (moviesArray.length >= 20) {
     for (let i = 0; i < 20; i += 1) {
-        top20.push(allTitles[i].title);
-        console.log(top20);
+      top20.push(allTitles[i].title);
     }
   } else {
     for (let i = 0; i < moviesArray.length; i += 1) {
-        top20.push(allTitles[i].title);
-        connsole.log(top20);
+      top20.push(allTitles[i].title);
     }
   }
-    return top20;
+  return top20;
 }
 
 // BONUS - Iteration 7: Time Format - Turn duration of the movies from hours to minutes
-function turnHoursToMinutes(moviesArray) {
-    
-}
+function turnHoursToMinutes(moviesArray) {}
 
 // BONUS - Iteration 8: Best yearly score average - Best yearly score average
 function bestYearAvg(moviesArray) {}
